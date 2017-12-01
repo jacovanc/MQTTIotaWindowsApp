@@ -15,3 +15,9 @@ C:\Users\Jaco\source\repos\MQTTIota\MQTTIota\obj\Debug\MQTTIota.exe
 C:\Users\Jaco\source\repos\MQTTIota\MQTTIota\obj\Debug\MQTTIota.pdb
 C:\Users\Jaco\source\repos\MQTTIota\MQTTIota\bin\Debug\M2Mqtt.Net.dll
 C:\Users\Jaco\source\repos\MQTTIota\MQTTIota\bin\Debug\M2Mqtt.Net.pdb
+C:\Users\Jaco\source\repos\mqttiota\MQTTIota\bin\Debug\IotaApi.dll
+C:\Users\Jaco\source\repos\mqttiota\MQTTIota\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Jaco\source\repos\mqttiota\MQTTIota\bin\Debug\RestSharp.dll
+C:\Users\Jaco\source\repos\mqttiota\MQTTIota\bin\Debug\IotaApi.xml
+C:\Users\Jaco\source\repos\mqttiota\MQTTIota\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Jaco\source\repos\mqttiota\MQTTIota\bin\Debug\RestSharp.xml

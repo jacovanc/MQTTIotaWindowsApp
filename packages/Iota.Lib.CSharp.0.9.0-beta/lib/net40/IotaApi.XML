@@ -1,0 +1,748 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IotaApi</name>
+    </assembly>
+    <members>
+        <member name="T:Iota.Lib.CSharp.Api.Core.StoreTransactionsRequest">
+            <summary>
+            Store transactions into the local storage. The trytes to be used for this call are returned by attachToTangle.
+            </summary>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.Core.InterruptAttachingToTangleRequest">
+            <summary>
+            Created by Adrian on 28.04.2016.
+            </summary>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.Core.GetTransactionsToApproveResponse">
+            <summary>
+            Created by Adrian on 28.04.2016.
+            </summary>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.Core.GetTransactionsToApproveRequest">
+            <summary>
+            Created by Adrian on 28.04.2016.
+            </summary>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.Core.GetTrytesResponse">
+            <summary>
+            Created by Adrian on 28.04.2016.
+            </summary>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.Core.AddNeighborsRequest">
+            <summary>
+            Request to add a neighbor to the node
+            </summary>
+            <seealso cref="T:Iota.Lib.CSharp.Api.Core.IotaRequest" />
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Core.AddNeighborsRequest.Uris">
+            <summary>
+            Gets or sets the uris.
+            </summary>
+            <value>
+            The uris.
+            </value>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.Core.AddNeighborsResponse">
+            <summary>
+            Response of AddNeighborsRequest
+            </summary>
+            <seealso cref="T:Iota.Lib.CSharp.Api.Core.AddNeighborsRequest" />
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Core.AddNeighborsResponse.AddedNeighbors">
+            <summary>
+            Gets the number of added neighbors.
+            </summary>
+            <value>
+            The number of added neighbors.
+            </value>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.Core.GetNeighborsResponse">
+            <summary>
+            Returns information about your node
+            </summary>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.Core.AttachToTangleRequest">
+            <summary>
+            Attach to Tangle Request
+            </summary>
+            <seealso cref="T:Iota.Lib.CSharp.Api.Core.IotaRequest" />
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Core.AttachToTangleRequest.MinWeightMagnitude">
+            <summary>
+            Proof of Work intensity. Minimum value is 18
+            </summary>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Core.AttachToTangleRequest.TrunkTransaction">
+            <summary>
+            Trunk transaction to approve.
+            </summary>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Core.AttachToTangleRequest.BranchTransaction">
+            <summary>
+            Branch transaction to approve.
+            </summary>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Core.AttachToTangleRequest.Trytes">
+            <summary>
+            List of trytes (raw transaction data) to attach to the tangle.
+            </summary>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.Core.GetTrytesRequest">
+            <summary>
+            Created by Adrian on 28.04.2016.
+            </summary>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.Core.EnumHelper.GetCommandString(System.Enum)">
+            <summary>
+            Retrieve the description on the enum
+            </summary>
+            <param name="en">The Enumeration</param>
+            <returns>A string representing the friendly name</returns>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.Core.BroadcastTransactionsRequest">
+            <summary>
+            Broadcast a list of transactions to all neighbors. The input trytes for this call are provided by attachToTangle
+            </summary>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Core.BroadcastTransactionsRequest.Trytes">
+            <summary>
+            Gets or sets the trytes.
+            </summary>
+            <value>
+            The trytes.
+            </value>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.Core.BroadcastTransactionsResponse">
+            <summary>
+            Response of <see cref="T:Iota.Lib.CSharp.Api.Core.BroadcastTransactionsRequest"/>
+            </summary>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.Core.AttachToTangleResponse">
+            <summary>
+            Response of <see cref="T:Iota.Lib.CSharp.Api.Core.AttachToTangleRequest"/>
+            </summary>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.Core.GetTipsRequest">
+            <summary>
+            Created by Adrian on 28.04.2016.
+            </summary>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.Core.GetTipsResponse">
+            <summary>
+            Created by Adrian on 29.04.2016.
+            </summary>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.Core.IotaRequest">
+            <summary>
+            Created by Adrian on 28.04.2016.
+            </summary>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.Core.IotaResponse">
+            <summary>
+            Created by Adrian on 28.04.2016.
+            </summary>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.Core.GetNodeInfoRequest">
+            <summary>
+            Returns information about your node
+            </summary>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Core.GetNodeInfoResponse.AppName">
+            <summary>
+            Name of the IOTA software you're currently using (IRI stands for Initial Reference Implementation).
+            </summary>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Core.GetNodeInfoResponse.AppVersion">
+            <summary>
+            The version of the IOTA software you're currently running.
+            </summary>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Core.GetNodeInfoResponse.JreAvailableProcessors">
+            <summary>
+            Available cores on your machine for JRE.  
+            </summary>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Core.GetNodeInfoResponse.JreFreeMemory">
+            <summary>
+            The amount of free memory in the Java Virtual Machine.
+            </summary>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Core.GetNodeInfoResponse.JreMaxMemory">
+            <summary>
+            The maximum amount of memory that the Java virtual machine will attempt to use.
+            </summary>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Core.GetNodeInfoResponse.JreTotalMemory">
+            <summary>
+            The total amount of memory in the Java virtual machine.
+            </summary>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Core.GetNodeInfoResponse.LatestMilestone">
+            <summary>
+            Latest milestone that was signed off by the coordinator. 
+            </summary>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Core.GetNodeInfoResponse.LatestMilestoneIndex">
+            <summary>
+            Index of the latest milestone.
+            </summary>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Core.GetNodeInfoResponse.LatestSolidSubtangleMilestone">
+            <summary>
+            The latest milestone which is solid and is used for sending transactions. 
+            For a milestone to become solid your local node must basically approve the subtangle of coordinator-approved transactions,
+            and have a consistent view of all referenced transactions. 
+            </summary>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Core.GetNodeInfoResponse.LatestSolidSubtangleMilestoneIndex">
+            <summary>
+             Index of the latest solid subtangle.
+            </summary>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Core.GetNodeInfoResponse.Neighbors">
+            <summary>
+            Number of neighbors you are directly connected with.
+            </summary>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Core.GetNodeInfoResponse.PacketsQueueSize">
+            <summary>
+            Packets which are currently queued up
+            </summary>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Core.GetNodeInfoResponse.Time">
+            <summary>
+            Current UNIX timestamp.
+            </summary>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Core.GetNodeInfoResponse.Tips">
+            <summary>
+            Number of tips in the network.
+            </summary>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Core.GetNodeInfoResponse.TransactionsToRequest">
+            <summary>
+            Transactions to request during syncing process.
+            </summary>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.Model.Signature">
+            <summary>
+            Thic class represents a signature
+            </summary>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.Model.Transfer">
+            <summary>
+            This class represents a Transfer
+            </summary>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.Model.Transaction">
+            <summary>
+            This class represents an iota transaction
+            </summary>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Model.Transaction.Hash">
+            <returns> The hash </returns>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Model.Transaction.Type">
+            <returns> The type </returns>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Model.Transaction.SignatureMessageChunk">
+            <returns> The signatureMessageChunk </returns>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Model.Transaction.Digest">
+            <returns> The signatureMessageChunk </returns>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Model.Transaction.Address">
+            <returns> The address </returns>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Model.Transaction.Value">
+            <returns> The value </returns>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Model.Transaction.Timestamp">
+            <returns> The timestamp </returns>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Model.Transaction.Bundle">
+            <returns> The bundle </returns>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Model.Transaction.Index">
+            <returns> The index </returns>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Model.Transaction.TrunkTransaction">
+            <returns> The transaction </returns>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Model.Transaction.BranchTransaction">
+            <returns> The branchTransaction </returns>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.Utils.ICurl">
+            <summary>
+            This interface abstracts ...
+            </summary>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.Utils.InvalidTryteException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.Utils.IotaApiUtils.NewAddress(System.String,System.Int32,System.Boolean,Iota.Lib.CSharp.Api.Utils.ICurl)">
+            <summary>
+             Generates a new address
+            </summary>
+            <param name="seed"></param>
+            <param name="index"></param>
+            <param name="checksum"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.Utils.Rest.JsonSerializer">
+            <summary>
+            Default JSON serializer for request bodies
+            Doesn't currently use the SerializeAs attribute, defers to Newtonsoft's attributes
+            </summary>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.Utils.Rest.JsonSerializer.#ctor">
+            <summary>
+            Default serializer   
+            </summary>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.Utils.Rest.JsonSerializer.#ctor(Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Default serializer with overload for allowing custom Json.NET settings
+            </summary>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.Utils.Rest.JsonSerializer.Serialize(System.Object)">
+            <summary>
+            Serialize the object as JSON
+            </summary>
+            <param name="obj">Object to serialize</param>
+            <returns>JSON as String</returns>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Utils.Rest.JsonSerializer.DateFormat">
+            <summary>
+            Unused for JSON Serialization
+            </summary>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Utils.Rest.JsonSerializer.RootElement">
+            <summary>
+            Unused for JSON Serialization
+            </summary>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Utils.Rest.JsonSerializer.Namespace">
+            <summary>
+            Unused for JSON Serialization
+            </summary>
+        </member>
+        <member name="P:Iota.Lib.CSharp.Api.Utils.Rest.JsonSerializer.ContentType">
+            <summary>
+            Content type for serialized content
+            </summary>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.Utils.Checksum">
+            <summary>
+            This class defines utility methods to add/remove the checksum to/from an address
+            </summary>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.Utils.Checksum.AddChecksum(System.String)">
+            <summary>
+            Adds the checksum to the specified address
+            </summary>
+            <param name="address">An address without checksum</param>
+            <returns>The address with the appended checksum </returns>
+            <exception cref="T:Iota.Lib.CSharp.Api.Exception.InvalidAddressException">is thrown when an invalid address is provided</exception>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.Utils.Checksum.RemoveChecksum(System.String)">
+            <summary>
+            Removes the checksum from the specified address with checksum
+            </summary>
+            <param name="addressWithChecksum">The address with checksum.</param>
+            <returns>the specified address without checksum</returns>
+            <exception cref="T:Iota.Lib.CSharp.Api.Exception.InvalidAddressException">is thrown when the specified address is not an address with checksum</exception>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.Utils.Curl">
+            <summary>
+            (c) 2016 Come-from-Beyond
+            
+            Curl belongs to the sponge function family.
+            
+            </summary>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.Utils.InputValidator">
+            <summary>
+            This class provides methods to validate the parameters of different iota API methods
+            </summary>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.Utils.InputValidator.IsAddress(System.String)">
+            <summary>
+            validates an adress
+            </summary>
+            <param name="address">address to validate</param>
+            <returns>Bool</returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.Utils.InputValidator.CheckAddress(System.String)">
+            <summary>
+            Checks whether the specified address is an address
+            </summary>
+            <param name="address">address to check</param>
+            <exception cref="T:Iota.Lib.CSharp.Api.Exception.InvalidAddressException">exception which is thrown when the address is invalid</exception>
+            <returns></returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.Utils.InputValidator.isValue(System.String)">
+            <summary>
+            Determines whether the specified string represents a signed integer
+            </summary>
+            <param name="value">a string</param>
+            <returns></returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.Utils.InputValidator.IsTrytes(System.String,System.Int32)">
+            <summary>
+            checks if input is correct trytes consisting of A-Z9 optionally validates length
+            </summary>
+            <param name="trytes">address to validate</param>
+            <param name="length">address to validate</param>
+            <returns>Bool</returns>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.Utils.IotaUnitConverter">
+            <summary>
+            This class provides methods to convert Iota to different units
+            </summary>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.Utils.IotaUnitConverter.ConvertUnits(System.Int64,Iota.Lib.CSharp.Api.Utils.IotaUnits,Iota.Lib.CSharp.Api.Utils.IotaUnits)">
+            <summary>
+            Convert the iota amount
+            </summary>
+            <param name="amount">amount</param>
+            <param name="fromUnit">the source unit e.g. the unit of amount</param>
+            <param name="toUnit">the target unit</param>
+            <returns>the specified amount in the target unit</returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.Utils.IotaUnitConverter.FindOptimalIotaUnitToDisplay(System.Int64)">
+            <summary>
+            Finds the optimal unit to display the specified amount in
+            </summary>
+            <param name="amount">amount </param>
+            <returns>the optimal IotaUnit</returns>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.Utils.IotaUnits">
+            <summary>
+            Iota SI Units 
+            </summary>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.Utils.TrytesConverter">
+            <summary>
+            This class allows to convert between ASCII and tryte encoded strings 
+            </summary>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.Utils.TrytesConverter.ToTrytes(System.String)">
+            <summary>
+            Converts the ASCII encoded string to trytes
+            </summary>
+            <param name="inputString">ASCII encoded string</param>
+            <returns>tryte encoded string</returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.Utils.TrytesConverter.ToString(System.String)">
+            <summary>
+            Converts the specified tryte encoded String to ASCII
+            </summary>
+            <param name="inputTrytes">tryte encoded string</param>
+            <returns>an ASCII encoded string</returns>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.IotaApi">
+            <summary>
+            This class provides access to the core API methods and the proposed calls
+            </summary>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaApi.#ctor(System.String,System.Int32)">
+            <summary>
+            Creates an api object that uses the specified connection settings to connect to a node
+            </summary>
+            <param name="host">hostname or API address of a node to interact with</param>
+            <param name="port">tcp/udp port</param>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaApi.#ctor(System.String,System.Int32,Iota.Lib.CSharp.Api.Utils.ICurl)">
+            <summary>
+            Creates an api object that uses the specified connection settings to connect to a node
+            </summary>
+            <param name="host">hostname or API address of a node to interact with</param>
+            <param name="port">tcp/udp port</param>
+            <param name="curl">a custom curl implementation to be used to perform the pow. Use the other constructor in order to use the default curl implementation provided by the library </param>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaApi.GetInputs(System.String,System.Int32,System.Int32,System.Int64)">
+            <summary>
+            Gets all possible inputs of a seed and returns them with the total balance. 
+            This is either done deterministically (by genearating all addresses until findTransactions is empty and doing getBalances),
+            or by providing a key range to use for searching through.
+            </summary>
+            <param name="seed">tryte-encoded seed. It should be noted that this seed is not transferred</param>
+            <param name="start">Starting key index</param>
+            <param name="end">Ending key index</param>
+            <param name="threshold">Minimum threshold of accumulated balances from the inputs that is required</param>
+            <returns> </returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaApi.GetBalanceAndFormat(System.String[],System.Int32,System.Int64)">
+            <summary>
+            Gets the balances of the specified addresses and calculates the total balance till the threshold is reached.
+            </summary>
+            <param name="addresses">addresses</param>
+            <param name="start">start index</param>
+            <param name="threshold">the threshold </param>
+            <returns>an Inputs object</returns>
+            <exception cref="T:Iota.Lib.CSharp.Api.Exception.NotEnoughBalanceException">is thrown if threshold exceeds the sum of balance of the specified addresses</exception>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaApi.PrepareTransfers(System.String,Iota.Lib.CSharp.Api.Model.Transfer[],System.Collections.Generic.List{Iota.Lib.CSharp.Api.Model.Input},System.String)">
+            <summary>
+            Main purpose of this function is to get an array of transfer objects as input, and then prepare the transfer by generating the correct bundle,
+            as well as choosing and signing the inputs if necessary (if it's a value transfer). The output of this function is an array of the raw transaction data (trytes)
+            </summary>
+            <param name="seed">81-tryte encoded address of recipient</param>
+            <param name="transfers"></param>
+            <param name="inputs"></param>
+            <param name="remainderAddress">Optional (default null). if defined, this address will be used for sending the remainder value (of the inputs) to.</param>
+            <returns>an array that contains the trytes of the new bundle</returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaApi.GetNewAddress(System.String,System.Int32,System.Boolean,System.Int32,System.Boolean)">
+            <summary>
+            Generates a new address from a seed and returns the remainderAddress. This is either done deterministically, or by providing the index of the new remainderAddress 
+            </summary>
+            <param name="seed">Tryte-encoded seed. It should be noted that this seed is not transferred</param>
+            <param name="index">Optional (default null). Key index to start search from. If the index is provided, the generation of the address is not deterministic.</param>
+            <param name="checksum">Optional (default false). Adds 9-tryte address checksum</param>
+            <param name="total">Optional (default 1)Total number of addresses to generate.</param>
+            <param name="returnAll">If true, it returns all addresses which were deterministically generated (until findTransactions returns null)</param>
+            <returns>an array of strings with the specifed number of addresses</returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaApi.GetTransfers(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Boolean)">
+            <summary>
+            Gets the transfers which are associated with a seed. 
+            The transfers are determined by either calculating deterministically which addresses were already used, 
+            or by providing a list of indexes to get the transfers from.
+            </summary>
+            <param name="seed">tryte-encoded seed. It should be noted that this seed is not transferred</param>
+            <param name="inclusionStates">If True, it gets the inclusion states of the transfers.</param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns>An Array of Bundle object that represent the transfers</returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaApi.FindTransactionObjects(System.String[])">
+            <summary>
+            Finds the transaction objects.
+            </summary>
+            <param name="adresses">The adresses.</param>
+            <returns>a list of transactions</returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaApi.GetTransactionsObjects(System.String[])">
+            <summary>
+            Gets the transactions objects.
+            </summary>
+            <param name="hashes">The hashes.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaApi.FindTransactionObjectsByBundle(System.String[])">
+            <summary>
+            Finds the transaction objects by bundle.
+            </summary>
+            <param name="bundles">The bundles.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaApi.ReplayBundle(System.String,System.Int32,System.Int32)">
+            <summary>
+            Replays the bundle.
+            </summary>
+            <param name="transaction">The transaction.</param>
+            <param name="depth">The depth.</param>
+            <param name="minWeightMagnitude">The minimum weight magnitude.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaApi.FindTransactionsByBundles(System.String[])">
+            <summary>
+            Finds the transactions by bundles.
+            </summary>
+            <param name="bundles">The bundles.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaApi.FindTransactionsByApprovees(System.String[])">
+            <summary>
+            Finds the transactions by approvees.
+            </summary>
+            <param name="approvees">The approvees.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaApi.FindTransactionsByDigests(System.String[])">
+            <summary>
+            Finds the transactions by digests.
+            </summary>
+            <param name="bundles">The bundles.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaApi.FindTransactionsByAddresses(System.String[])">
+            <summary>
+            Finds the transactions by addresses.
+            </summary>
+            <param name="addresses">The addresses.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaApi.GetLatestInclusion(System.String[])">
+            <summary>
+            Gets the latest inclusion.
+            </summary>
+            <param name="hashes">The hashes.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaApi.SendTransfer(System.String,System.Int32,System.Int32,Iota.Lib.CSharp.Api.Model.Transfer[],Iota.Lib.CSharp.Api.Model.Input[],System.String)">
+            <summary>
+            Wrapper function that basically does prepareTransfers, as well as attachToTangle and finally, it broadcasts and stores the transactions locally.
+            </summary>
+            <param name="seed">tryte-encoded seed</param>
+            <param name="depth">depth</param>
+            <param name="minWeightMagnitude"></param>
+            <param name="transfers">Array of transfer objects</param>
+            <param name="inputs">Option (default null). List of inputs used for funding the transfer</param>
+            <param name="address">if defined, this address will be used for sending the remainder value (of the inputs) to</param>
+            <returns> an array of the transfer (transaction objects)</returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaApi.SendTrytes(System.String[],System.Int32,System.Int32)">
+            <summary>
+            Sends the trytes.
+            </summary>
+            <param name="trytes">The trytes.</param>
+            <param name="depth">The depth.</param>
+            <param name="minWeightMagnitude">The minimum weight magnitude.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaApi.GetBundle(System.String)">
+            <summary>
+            This function returns the bundle which is associated with a transaction. Input can by any type of transaction (tail and non-tail). 
+            If there are conflicting bundles (because of a replay for example) it will return multiple bundles. 
+            It also does important validation checking (signatures, sum, order) to ensure that the correct bundle is returned.
+            </summary>
+            <param name="transaction">the transaction encoded in trytes</param>
+            <returns>an array of bundle, if there are multiple arrays it means that there are conflicting bundles.</returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaApi.BroadcastAndStore(System.Collections.Generic.List{System.String})">
+            <summary>
+            Wrapper function that broadcasts and stores the specified trytes
+            </summary>
+            <param name="trytes">trytes</param>
+        </member>
+        <member name="T:Iota.Lib.CSharp.Api.IotaCoreApi">
+            <summary>
+            This class provides access to the Iota core API
+            </summary>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaCoreApi.#ctor(System.String,System.Int32)">
+            <summary>
+            Creates a core api object that uses the specified connection settings to connect to a node
+            </summary>
+            <param name="host">hostname or API address of a node to interact with</param>
+            <param name="port">tcp/udp port</param>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaCoreApi.AttachToTangle(System.String,System.String,System.String[],System.Int32)">
+            <summary>
+            Attaches the specified transactions (trytes) to the Tangle by doing Proof of Work. 
+            You need to supply branchTransaction as well as trunkTransaction 
+            (basically the tips which you're going to validate and reference with this transaction)
+             - both of which you'll get through the getTransactionsToApprove API call.
+            </summary>
+            <param name="trunkTransaction">Trunk transaction to approve.</param>
+            <param name="branchTransaction">Branch transaction to approve.</param>
+            <param name="trytes">List of trytes (raw transaction data) to attach to the tangle.</param>
+            <param name="minWeightMagnitude">Proof of Work intensity. Minimum value is 18</param>
+            <returns>The returned value contains a different set of tryte values which you can input into broadcastTransactions and storeTransactions. 
+            The returned tryte value, the last 243 trytes basically consist of the: trunkTransaction + branchTransaction + nonce. 
+            These are valid trytes which are then accepted by the network.</returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaCoreApi.BroadcastTransactions(System.Collections.Generic.List{System.String})">
+            <summary>
+            Broadcasts the transactions.
+            </summary>
+            <param name="trytes">The transactions in trytes representation</param>
+            <returns></returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaCoreApi.FindTransactions(System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String})">
+            <summary>
+            Finds the transactions using the specified arguments as search criteria
+            </summary>
+            <param name="addresses">The addresses.</param>
+            <param name="tags">The tags.</param>
+            <param name="approves">The approves.</param>
+            <param name="bundles">The bundles.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaCoreApi.GetBalances(System.Collections.Generic.List{System.String},System.Int64)">
+            <summary>
+            Gets the balances.
+            </summary>
+            <param name="addresses">The addresses.</param>
+            <param name="threshold">The threshold.</param>
+            <returns> It returns the confirmed balance which a list of addresses have at the latest confirmed milestone. 
+            In addition to the balances, it also returns the milestone as well as the index with which the confirmed balance was determined. 
+            The balances is returned as a list in the same order as the addresses were provided as input.</returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaCoreApi.GetInclusionStates(System.String[],System.String[])">
+            <summary>
+            Gets the inclusion states.
+            </summary>
+            <param name="transactions">The transactions.</param>
+            <param name="milestones">The milestones.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaCoreApi.StoreTransactions(System.Collections.Generic.List{System.String})">
+            <summary>
+            Stores the specified transactions in trytes into the local storage. The trytes to be used for this call are returned by attachToTangle.
+            </summary>
+            <param name="trytes">The trytes representing the transactions</param>
+            <returns></returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaCoreApi.GetNodeInfo">
+            <summary>
+            Gets the node information.
+            </summary>
+            <returns>information about the node.</returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaCoreApi.GetTips">
+            <summary>
+            Gets the tips.
+            </summary>
+            <returns>a list of tips</returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaCoreApi.GetTransactionsToApprove(System.Int32)">
+            <summary>
+            Gets the transactions to approve.
+            </summary>
+            <param name="depth">The depth is the number of bundles to go back to determine the transactions for approval. 
+            The higher your depth value, the more "babysitting" you do for the network (as you have to confirm more transactions).</param>
+            <returns> trunkTransaction and branchTransaction (result of the Tip selection)</returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaCoreApi.GetTrytes(System.String[])">
+            <summary>
+            Gets the raw transaction data (trytes) of a specific transaction.
+            These trytes can then be easily converted into the actual transaction object using the constructor of Transaction
+            </summary>
+            <param name="hashes">The hashes of the transactions</param>
+            <returns></returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaCoreApi.InterruptAttachingToTangle">
+            <summary>
+            Interrupts and completely aborts the attachToTangle process.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaCoreApi.GetNeighbors">
+            <summary>
+            Gets the neighbors the node is connected to
+            </summary>
+            <returns>Returns the set of neighbors the node is connected to as well as their activity count. The activity counter is reset after restarting IRI.</returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaCoreApi.AddNeighbors(System.String[])">
+            <summary>
+            Adds the neighbor(s) to the node.  It should be noted that this is only temporary, and the added neighbors will be removed from your set of neighbors after you relaunch IRI.
+            </summary>
+            <param name="uris">The uris of the neighbors to add. The URI (Unique Resource Identification) format is "udp://IPADDRESS:PORT" </param>
+            <returns>Returns the number of added Neighbors</returns>
+        </member>
+        <member name="M:Iota.Lib.CSharp.Api.IotaCoreApi.RemoveNeighbors(System.String[])">
+            <summary>
+            Removes the neighbor(s) from the node. 
+            </summary>
+            <param name="uris">The uris of the neighbors to add. The URI (Unique Resource Identification) format is "udp://IPADDRESS:PORT"</param>
+            <returns>Returns the number of remvoved neighbors</returns>
+        </member>
+    </members>
+</doc>

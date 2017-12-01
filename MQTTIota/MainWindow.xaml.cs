@@ -23,16 +23,26 @@ namespace MQTTIota
     public partial class MainWindow : Window
     {
         internal static MainWindow main;
+        MQTT MQTTClient;
+        Iota IotaClient;
+
         public MainWindow()
         {
             main = this;
             InitializeComponent();
-            MQTT client = new MQTT("iot.eclipse.org", "/IotaTransaction");
+            MQTTClient = new MQTT("iot.eclipse.org", "/IotaTransaction");
+            IotaClient = new Iota("node05.iotatoken.nl", 16265);
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+            DoTransfer();
+        }
 
+        private void DoTransfer()
+        {
+            MQTTClient.SendMessage("Example message");
+            //IotaClient.SendTransaction("example");
         }
     }
 }

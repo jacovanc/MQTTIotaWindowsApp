@@ -13,22 +13,25 @@ namespace MQTTIota
     public class MQTT
     {
         public MqttClient client;
-        string messages;
+        private string _topic;
+        private string _host;
 
         public MQTT(string host, string topic)
         {
-            client = Initialise(host, topic);
+            _topic = topic;
+            _host = host;
+            client = Initialise();
         }
 
-        private MqttClient Initialise(string host, string topic)
+        private MqttClient Initialise()
         {
-            client = new MqttClient(host);
+            client = new MqttClient(_host);
             client.MqttMsgPublishReceived += client_recievedMessage;
 
             string clientId = Guid.NewGuid().ToString();
             client.Connect(clientId);
 
-            client.Subscribe(new String[] { topic }, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
+            client.Subscribe(new String[] { _topic }, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
             return client;
         }
 
@@ -42,5 +45,10 @@ namespace MQTTIota
                 MainWindow.main.receiveText.Text += Environment.NewLine + message;
             }));
         }
-   }
+
+        internal void SendMessage(string value)
+        {
+            client.Publish(_topic, Encoding.UTF8.GetBytes(value), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
+        }
+    }
 }

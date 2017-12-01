@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="358.824" Width="525">
     <Grid>
-        <TextBlock x:Name="sendText" HorizontalAlignment="Left" Margin="10,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="266" Width="249"/>
-        <TextBlock x:Name="receiveText" HorizontalAlignment="Left" Margin="264,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="266" Width="243"/>
+        <TextBlock ScrollViewer.VerticalScrollBarVisibility="Auto" x:Name="sendText" HorizontalAlignment="Left" Margin="10,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="266" Width="249" />
+        <TextBlock ScrollViewer.VerticalScrollBarVisibility="Auto" x:Name="receiveText" HorizontalAlignment="Left" Margin="264,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="266" Width="243"/>
         <Button x:Name="sendButton" Content="Send message" HorizontalAlignment="Left" Margin="10,295,0,0" VerticalAlignment="Top" Width="149" Click="button_Click"/>
         <Label x:Name="sendLabel" Content="Send" HorizontalAlignment="Left" Margin="10,-2,0,0" VerticalAlignment="Top"/>
         <Label x:Name="receiveLabel" Content="Receive" HorizontalAlignment="Left" Margin="264,-1,0,0" VerticalAlignment="Top"/>
