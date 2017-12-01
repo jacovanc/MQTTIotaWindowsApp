@@ -12,6 +12,7 @@
         <Button x:Name="sendButton" Content="Send message" HorizontalAlignment="Left" Margin="10,295,0,0" VerticalAlignment="Top" Width="149" Click="button_Click"/>
         <Label x:Name="sendLabel" Content="Send" HorizontalAlignment="Left" Margin="10,-2,0,0" VerticalAlignment="Top"/>
         <Label x:Name="receiveLabel" Content="Receive" HorizontalAlignment="Left" Margin="264,-1,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="184,295,0,0" VerticalAlignment="Top" Width="75" Click="button_Click_1"/>
 
     </Grid>
 </Window>

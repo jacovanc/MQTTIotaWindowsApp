@@ -31,7 +31,7 @@ namespace MQTTIota
             main = this;
             InitializeComponent();
             MQTTClient = new MQTT("iot.eclipse.org", "/IotaTransaction");
-            IotaClient = new Iota("node05.iotatoken.nl", 16265);
+            IotaClient = new Iota("localhost", 14265);
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -42,7 +42,12 @@ namespace MQTTIota
         private void DoTransfer()
         {
             MQTTClient.SendMessage("Example message");
-            //IotaClient.SendTransaction("example");
+            IotaClient.CreateTransaction();
+        }
+
+        private void button_Click_1(object sender, RoutedEventArgs e)
+        {
+            IotaClient.GetTransfers();
         }
     }
 }

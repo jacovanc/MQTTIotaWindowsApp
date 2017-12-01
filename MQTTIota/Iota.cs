@@ -1,5 +1,7 @@
 ﻿using Iota.Lib.CSharp.Api;
 using Iota.Lib.CSharp.Api.Core;
+using Iota.Lib.CSharp.Api.Model;
+using Iota.Lib.CSharp.Api.Utils;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -13,6 +15,8 @@ namespace MQTTIota
     {
         public string _host;
         public int _port;
+        IotaApi client;
+        string seed = "ACRXCTKPIBJ9DWXHRKNWUMGBOPGGRKJHRMDIXNPUSMYQL9QLAPUYVQL9SWRHHXFJSGETLI99CZNVWLUD9";
 
         public Iota(string host, int port)
         {
@@ -23,9 +27,24 @@ namespace MQTTIota
         }
         private void Initialise()
         {
-            IotaApi client = new IotaApi(_host, _port);
-            GetNodeInfoResponse nodeInfo = client.GetNodeInfo();
+            client = new IotaApi(_host, _port);
             Debug.Write("test");
+        }
+
+        internal void CreateTransaction()
+        {
+            var address = client.GetNewAddress(seed, 0, false, 1, false);
+            Transfer transfer = new Transfer(address.First(), 0, TrytesConverter.ToTrytes("Test Iota Message"), "Test Tag");
+            client.SendTransfer(seed, 10, 18, new Transfer[] { transfer });
+        }
+
+        internal void GetTransfers()
+        {
+            var transfers = client.GetTransfers(seed, 0, 5, false);
+            MainWindow.main.Dispatcher.Invoke(new Action(delegate ()
+            {
+                MainWindow.main.receiveText.Text += Environment.NewLine + transfers.ToString();
+            }));
         }
     }
 }
