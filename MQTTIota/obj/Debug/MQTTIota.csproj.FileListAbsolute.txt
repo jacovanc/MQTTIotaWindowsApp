@@ -1,0 +1,17 @@
+C:\Users\Jaco\source\repos\MQTTIota\MQTTIota\bin\Debug\MQTTIota.exe.config
+C:\Users\Jaco\source\repos\MQTTIota\MQTTIota\bin\Debug\MQTTIota.exe
+C:\Users\Jaco\source\repos\MQTTIota\MQTTIota\bin\Debug\MQTTIota.pdb
+C:\Users\Jaco\source\repos\MQTTIota\MQTTIota\obj\Debug\MQTTIota.csprojResolveAssemblyReference.cache
+C:\Users\Jaco\source\repos\MQTTIota\MQTTIota\obj\Debug\MainWindow.g.cs
+C:\Users\Jaco\source\repos\MQTTIota\MQTTIota\obj\Debug\App.g.cs
+C:\Users\Jaco\source\repos\MQTTIota\MQTTIota\obj\Debug\MQTTIota_MarkupCompile.cache
+C:\Users\Jaco\source\repos\MQTTIota\MQTTIota\obj\Debug\MQTTIota_MarkupCompile.lref
+C:\Users\Jaco\source\repos\MQTTIota\MQTTIota\obj\Debug\MainWindow.baml
+C:\Users\Jaco\source\repos\MQTTIota\MQTTIota\obj\Debug\MQTTIota.g.resources
+C:\Users\Jaco\source\repos\MQTTIota\MQTTIota\obj\Debug\MQTTIota.Properties.Resources.resources
+C:\Users\Jaco\source\repos\MQTTIota\MQTTIota\obj\Debug\MQTTIota.csproj.GenerateResource.Cache
+C:\Users\Jaco\source\repos\MQTTIota\MQTTIota\obj\Debug\MQTTIota.csproj.CoreCompileInputs.cache
+C:\Users\Jaco\source\repos\MQTTIota\MQTTIota\obj\Debug\MQTTIota.exe
+C:\Users\Jaco\source\repos\MQTTIota\MQTTIota\obj\Debug\MQTTIota.pdb
+C:\Users\Jaco\source\repos\MQTTIota\MQTTIota\bin\Debug\M2Mqtt.Net.dll
+C:\Users\Jaco\source\repos\MQTTIota\MQTTIota\bin\Debug\M2Mqtt.Net.pdb
