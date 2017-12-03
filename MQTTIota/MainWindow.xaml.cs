@@ -1,20 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
+using System.Timers;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using uPLibrary.Networking.M2Mqtt;
-using uPLibrary.Networking.M2Mqtt.Messages;
-using MQTTIota;
 namespace MQTTIota
 {
     /// <summary>
@@ -25,6 +12,8 @@ namespace MQTTIota
         internal static MainWindow main;
         MQTT MQTTClient;
         Iota IotaClient;
+        int count = 0;
+        private Timer aTimer = new Timer();
 
         public MainWindow()
         {
@@ -32,22 +21,33 @@ namespace MQTTIota
             InitializeComponent();
             MQTTClient = new MQTT("iot.eclipse.org", "/IotaTransaction");
             IotaClient = new Iota("localhost", 14265);
-        }
+            InitTimer();
 
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            DoTransfer();
         }
 
         private void DoTransfer()
         {
-            MQTTClient.SendMessage("Example message");
-            IotaClient.CreateTransaction();
+
+            MQTTClient.SendMessage(1);
+            //IotaClient.CreateTransaction();
         }
 
         private void button_Click_1(object sender, RoutedEventArgs e)
         {
-            IotaClient.GetTransfers();
+            MQTTClient.LogValues();
+        }
+
+        public void InitTimer()
+        { 
+            aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
+            aTimer.Interval = 5000;
+            aTimer.Enabled = true;
+        }
+
+        private void OnTimedEvent(object sender, EventArgs e)
+        {
+            count += 1;
+            MQTTClient.SendMessage(count);
         }
     }
 }

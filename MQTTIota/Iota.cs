@@ -34,7 +34,7 @@ namespace MQTTIota
         internal void CreateTransaction()
         {
             var address = client.GetNewAddress(seed, 0, false, 1, false);
-            Transfer transfer = new Transfer(address.First(), 0, TrytesConverter.ToTrytes("Test Iota Message"), "Test Tag");
+            Transfer transfer = new Transfer(address.First(), 0, TrytesConverter.ToTrytes("Test Iota Message"), TrytesConverter.ToTrytes("Test Tag"));
             client.SendTransfer(seed, 10, 18, new Transfer[] { transfer });
         }
 
